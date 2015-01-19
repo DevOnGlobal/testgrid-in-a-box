@@ -1,7 +1,7 @@
 prowareness/selenium-node-chrome
 ============================
 
-Out-of-the-box Selenium Grid node image with Chrome.
+Out-of-the-box Selenium image with Chrome. Can be used as a standalone instance or as a node for Selenium Grid.
 
 Usage
 -----
@@ -17,6 +17,15 @@ To create the image `prowareness/selenium-node-chrome`, execute the following co
 You can now push your new image to the registry:
 
     docker push prowareness/selenium-node-chrome
+
+Running your image as a stand-alone solution
+--------------------------------------------
+
+Start a container using the Chrome image:
+
+    docker run -d --p 4444:4444 --name chrome-standalone prowareness/selenium-node-chrome
+
+Thats it! You can now use it by providing your RemoteWebDriver class with the url http://localhost:4444/wd/hub
 
 Running your image in combination with hub image
 --------------------------------------------

@@ -1,8 +1,7 @@
 prowareness/selenium-node-ff
 ============================
 
-Out-of-the-box Selenium Grid node image with Firefox.
-
+Out-of-the-box Selenium image with Firefox. Can be used as a standalone instance or as a node for Selenium Grid.
 
 Usage
 -----
@@ -18,6 +17,15 @@ To create the image `prowareness/selenium-node-ff`, execute the following comman
 You can now push your new image to the registry:
 
     docker push prowareness/selenium-node-ff
+
+Running your image as a stand-alone solution
+--------------------------------------------
+
+Start a container using the Firefox image:
+
+    docker run -d --p 4444:4444 --name ff-standalone prowareness/selenium-node-ff
+
+Thats it! You can now use it by providing your RemoteWebDriver class with the url http://localhost:4444/wd/hub
 
 Running your image in combination with hub image
 --------------------------------------------
