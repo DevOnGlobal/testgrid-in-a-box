@@ -13,7 +13,7 @@ if [ $HUB_NAME ]; then
   java -jar /selenium-server-standalone.jar \
     -role node \
     -hub http://$HUB_PORT_4444_TCP_ADDR:$HUB_PORT_4444_TCP_PORT/wd/register \
-    -browser browserName=firefox,maxInstances=$MAX_INSTANCES
+    -browser browserName=chrome,maxInstances=$MAX_INSTANCES
 else
   # Run the selenium server standalone
   java -jar /selenium-server-standalone.jar
