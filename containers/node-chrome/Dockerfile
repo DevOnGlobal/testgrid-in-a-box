@@ -14,6 +14,7 @@ RUN apt-get update && \
       xvfb \
       default-jre \
       fluxbox \
+      fonts-liberation \
       zip
 
 COPY startnode.sh /

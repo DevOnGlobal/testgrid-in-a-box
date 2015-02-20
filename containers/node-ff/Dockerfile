@@ -9,6 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
       xvfb \
       default-jre \
       fluxbox \
+      fonts-liberation \
       wget
 
 COPY startnode.sh .
